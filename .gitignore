@@ -145,5 +145,4 @@ gradle-app.setting
 .idea/misc.xml
 .idea/uiDesigner.xml
 .idea/vcs.xml
-src/main/resources/application.properties
 src/test/
