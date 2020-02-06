@@ -13,6 +13,6 @@ public class IndexController {
         return "index";
     }
 
-    @GetMapping("/result")
+    @PostMapping("/result")
     public String predict(){return "result";}
 }
