@@ -1,3 +1,4 @@
+# Created by .ignore support plugin (hsz.mobi)
 
 # Created by https://www.gitignore.io/api/java,gradle,intellij
 # Edit at https://www.gitignore.io/?templates=java,gradle,intellij
@@ -135,19 +136,10 @@ gradle-app.setting
 **/build/
 
 # End of https://www.gitignore.io/api/java,gradle,intellij
-.gradle/
 .idea/.gitignore
 .idea/codeStyles/
 .idea/compiler.xml
-.idea/dbnavigator.xml
-.idea/gradle.xml
 .idea/jarRepositories.xml
 .idea/misc.xml
-.idea/uiDesigner.xml
 .idea/vcs.xml
-build.gradle
-gradle/
-gradlew
-gradlew.bat
-settings.gradle
-src/
+src/test/
