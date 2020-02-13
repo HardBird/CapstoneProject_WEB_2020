@@ -1,0 +1,27 @@
+{{>layout/header}}
+
+<div>
+<table class="table table-horizontal table-bordered">
+    <thead class="thead-strong">
+    <tr>
+        <th>번호</th>
+        <th>이름</th>
+        <th>나이</th>
+        <th>직업</th>
+    </tr>
+    </thead>
+    <tbody id="tbody">
+    {{#counselor}}
+        <tr>
+            <td>{{id}}</td>
+            <td><a href="/counselor/update/{{id}}">{{name}}</a></td>
+            <td>{{age}}</td>
+            <td>{{job}}</td>
+        </tr>
+    {{/counselor}}
+    <a href="/counselor/save" role="button" class="btn btn-primary">등록</a>
+    </tbody>
+</table>
+</div>
+
+{{>layout/footer}}
