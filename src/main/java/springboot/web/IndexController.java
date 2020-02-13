@@ -6,11 +6,13 @@ package springboot.web;
         import org.springframework.ui.Model;
         import org.springframework.web.bind.annotation.*;
         import org.springframework.web.multipart.MultipartFile;
+        import springboot.service.ClientService;
         import springboot.service.CounselorService;
         import springboot.service.PostsService;
         import springboot.service.Service_Result;
         import springboot.web.dto.Counselor.CounselorResponseDto;
         import springboot.web.dto.Posts.PostsResponseDto;
+        import springboot.web.dto.client.ClientResponseDto;
 
         import javax.servlet.http.HttpSession;
         import java.io.IOException;
@@ -23,6 +25,7 @@ public class IndexController {
 
     private final PostsService postsService;
     private final CounselorService counselorService;
+    private final ClientService clientService;
     private final HttpSession httpSession;
     @GetMapping("/posts/index")
     public String posts_index(Model model) {
@@ -73,5 +76,22 @@ public class IndexController {
         model.addAttribute("counselor", dto);
 
         return "counselor-update";
+    }
+    @GetMapping("/client/index")
+    public String client_index(Model model) {
+        model.addAttribute("client", clientService.findAllDesc());
+        return "client-index";
+    }
+    @GetMapping("/client/save")
+    public String clientSave() {
+        return "client-save";
+    }
+
+    @GetMapping("/client/update/{id}")
+    public String clientUpdate(@PathVariable Long id, Model model) {
+        ClientResponseDto dto = clientService.findById(id);
+        model.addAttribute("client", dto);
+
+        return "client-update";
     }
 }

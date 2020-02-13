@@ -1,0 +1,28 @@
+{{>layout/header}}
+
+<h1>Client-index Page</h1>
+<div>
+    <table class="table table-horizontal table-bordered">
+        <thead class="thead-strong">
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>나이</th>
+            <th>직업</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        {{#client}}
+            <tr>
+                <td>{{id}}</td>
+                <td><a href="/client/update/{{id}}">{{name}}</a></td>
+                <td>{{age}}</td>
+                <td>{{job}}</td>
+            </tr>
+        {{/client}}
+        <a href="/client/save" role="button" class="btn btn-primary">등록</a>
+        </tbody>
+    </table>
+</div>
+
+{{>layout/footer}}
