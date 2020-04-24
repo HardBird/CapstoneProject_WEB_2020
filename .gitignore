@@ -146,3 +146,5 @@ gradle-app.setting
 .idea/uiDesigner.xml
 .idea/vcs.xml
 src/test/
+application.yml
+src/main/resources/application.yml

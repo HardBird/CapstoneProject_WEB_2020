@@ -11,21 +11,22 @@ import java.io.IOException;
 @Service
 public class Service_Result {
 
-    public void save_img(MultipartFile image) throws IOException {
-        String imgName = "test.jpg";
-        File upl = new File("/Users/jungwook/IdeaProjects/capstone_project/src/main/resources/images", imgName);
+    public void save_img(MultipartFile image,int count) throws IOException {
+        String imgName = "img"+count+".jpg";
+        //File upl = new File("/Users/jungwook/IdeaProjects/capstone_project/src/main/resources/images", imgName);
+        //File upl = new File("./src/main/resources/static/images", imgName);
+        File upl = new File("/Users/jungwook/Desktop/store/images/", imgName);
         upl.createNewFile();
         FileOutputStream fout = new FileOutputStream(upl);
         fout.write(image.getBytes());
         fout.close();
     }
-    public void save_txt(MultipartFile image) throws IOException {
-        String imgName = "test.txt";
-        File upl = new File("/Users/jungwook/IdeaProjects/capstone_project/src/main/resources/text", imgName);
+    public void save_txt(MultipartFile text, int count) throws IOException {
+        String textName = "text"+count+".txt";
+        File upl = new File("./src/main/resources/static/text", textName);
         upl.createNewFile();
         FileOutputStream fout = new FileOutputStream(upl);
-        fout.write(image.getBytes());
+        fout.write(text.getBytes());
         fout.close();
     }
-    public void Service_Result(){}
 }

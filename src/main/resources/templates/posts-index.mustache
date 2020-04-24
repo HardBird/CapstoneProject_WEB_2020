@@ -1,6 +1,6 @@
 {{>layout/header}}
 
-<h1>상담 기록 게시판</h1>
+<h1><a href="/" >상담 기록 게시판</a></h1>
 <div class="col-md-12">
     <div class="row">
         <div class="col-md-6">
@@ -17,18 +17,23 @@
         <thead class="thead-strong">
         <tr>
             <th>게시글번호</th>
-            <th>상담일자</th>
             <th>상담자(작성자)</th>
+            <th>내담자</th>
+            <th>상담일자</th>
+            <th>이미지들</th>
             <th>최종수정일</th>
         </tr>
         </thead>
         <tbody id="tbody">
         {{#posts}}
             <tr>
-                <td>{{id}}</td>
-                <td><a href="/posts/update/{{id}}">{{title}}</a></td>
+                <td><a href="/posts/view/{{id}}">{{id}}</a></td>
                 <td>{{author}}</td>
+                <td>{{client}}</td>
+                <td>{{title}}</td>
+                <td>{{images}}</td>
                 <td>{{modifiedDate}}</td>
+                <td><input type="button" value="수정" onClick="location.href='/posts/update/{{id}}'"/></td>
             </tr>
         {{/posts}}
         </tbody>

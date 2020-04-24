@@ -10,19 +10,23 @@
                 <input type="text" class="form-control" id="id" value="{{post.id}}" readonly>
             </div>
             <div class="form-group">
-                <label for="title">상담일</label>
-                <input type="text" class="form-control" id="title" value="{{post.title}}">
-            </div>
-            <div class="form-group">
                 <label for="author"> 상담자(작성자) </label>
                 <input type="text" class="form-control" id="author" value="{{post.author}}" readonly>
             </div>
             <div class="form-group">
+                <label for="author"> 내담자 </label>
+                <input type="text" class="form-control" id="client" value="{{post.client}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="title">상담일</label>
+                <input type="text" class="form-control" id="title" value="{{post.title}}">
+            </div>
+            <div class="form-group">
                 <label for="content"> 상담내용 </label>
-                <textarea class="form-control" id="content">{{post.content}}</textarea>
+                <textarea class="form-control" id="content" >{{post.content}}</textarea>
             </div>
         </form>
-        <a href="/" role="button" class="btn btn-secondary">취소</a>
+        <a href="/posts/index" role="button" class="btn btn-secondary">취소</a>
         <button type="button" class="btn btn-primary" id="btn-update">수정 완료</button>
         <button type="button" class="btn btn-danger" id="btn-delete">삭제</button>
     </div>

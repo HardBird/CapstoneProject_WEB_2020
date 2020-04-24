@@ -17,7 +17,6 @@ public class Client extends BaseTimeEntity {
     private Long id;
     @Column(length = 500, nullable = false)
     private Long age;
-
     @Column(length = 500, nullable = false)
     private String name;
     @Column(length = 500, nullable = false)

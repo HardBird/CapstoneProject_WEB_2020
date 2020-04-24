@@ -1,14 +1,16 @@
 package springboot.web;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
+import springboot.Application;
 import springboot.service.PostsService;
-import springboot.web.dto.Posts.PostsListResponseDto;
-import springboot.web.dto.Posts.PostsResponseDto;
-import springboot.web.dto.Posts.PostsSaveRequestDto;
-import springboot.web.dto.Posts.PostsUpdateRequestDto;
+import springboot.web.dto.Posts.*;
 
 import java.util.List;
+
 
 @RequiredArgsConstructor
 @RestController
@@ -18,6 +20,7 @@ public class PostsApiController {
 
     @PostMapping("/api/v1/posts")
     public Long save(@RequestBody PostsSaveRequestDto requestDto){
+        //jsonMapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
         return postsService.save(requestDto);
     }
 
@@ -40,5 +43,9 @@ public class PostsApiController {
     public Long delete(@PathVariable Long id) {
         postsService.delete(id);
         return id;
+    }
+    @GetMapping("/api/v1/posts/findByClient/{client}")
+    public List<PostsListResponseDto> findByClient(@PathVariable String client) {
+        return postsService.findByClient(client);
     }
 }

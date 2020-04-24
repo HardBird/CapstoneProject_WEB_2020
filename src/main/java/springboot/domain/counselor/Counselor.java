@@ -1,11 +1,11 @@
 package springboot.domain.counselor;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import springboot.domain.BaseTimeEntity;
+        import lombok.Builder;
+        import lombok.Getter;
+        import lombok.NoArgsConstructor;
+        import springboot.domain.BaseTimeEntity;
 
-import javax.persistence.*;
+        import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
@@ -17,7 +17,6 @@ public class Counselor extends BaseTimeEntity {
     private Long id;
     @Column(length = 500, nullable = false)
     private Long age;
-
     @Column(length = 500, nullable = false)
     private String name;
     @Column(length = 500, nullable = false)

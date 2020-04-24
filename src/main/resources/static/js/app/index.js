@@ -43,7 +43,9 @@ var main = {
         var data = {
             title: $('#title').val(),
             author: $('#author').val(),
-            content: $('#content').val()
+            client: $('#client').val(),
+            content: $('#content').val(),
+            images: $('#images').val()
         };
 
         $.ajax({

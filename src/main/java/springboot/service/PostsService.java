@@ -6,10 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import springboot.domain.posts.Posts;
 import springboot.domain.posts.PostsRepository;
-import springboot.web.dto.Posts.PostsListResponseDto;
-import springboot.web.dto.Posts.PostsResponseDto;
-import springboot.web.dto.Posts.PostsSaveRequestDto;
-import springboot.web.dto.Posts.PostsUpdateRequestDto;
+import springboot.web.dto.Posts.*;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -52,5 +49,17 @@ public class PostsService {
                 .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id=" + id));
 
         postsRepository.delete(posts);
+    }
+    @org.springframework.transaction.annotation.Transactional
+    public List<PostsListResponseDto> findByClient (String client) {
+        return postsRepository.findByClient(client).stream()
+                .map(PostsListResponseDto::new)
+                .collect(Collectors.toList());
+    }
+    @org.springframework.transaction.annotation.Transactional
+    public List<PostsListResponseDto> findByCounselor (String counselor) {
+        return postsRepository.findByCounselor(counselor).stream()
+                .map(PostsListResponseDto::new)
+                .collect(Collectors.toList());
     }
 }

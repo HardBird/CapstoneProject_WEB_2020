@@ -1,5 +1,6 @@
 {{>layout/header}}
-<h1>Counselor-index Page</h1>
+
+<h1><a href="/" >Counselor-index Page</a></h1>
 <div>
 <table class="table table-horizontal table-bordered">
     <thead class="thead-strong">
@@ -14,9 +15,10 @@
     {{#counselor}}
         <tr>
             <td>{{id}}</td>
-            <td><a href="/counselor/update/{{id}}">{{name}}</a></td>
+            <td><a href="/posts/findByCounselor/{{name}}">{{name}}</a></td>
             <td>{{age}}</td>
             <td>{{job}}</td>
+            <td><input type="button" value="수정" onClick="location.href='/counselor/update/{{id}}'"/></td>
         </tr>
     {{/counselor}}
     <a href="/counselor/save" role="button" class="btn btn-primary">등록</a>
