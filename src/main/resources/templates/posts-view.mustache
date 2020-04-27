@@ -1,0 +1,45 @@
+{{>layout/header}}
+
+<h1>게시글 확인</h1>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<div class="col-md-12">
+    <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                <label for="title">글 번호</label>
+                <input type="text" class="form-control" id="id" value="{{post.id}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="author"> 상담자(작성자) </label>
+                <input type="text" class="form-control" id="author" value="{{post.author}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="author"> 내담자 </label>
+                <input type="text" class="form-control" id="client" value="{{post.client}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="title">상담일</label>
+                <input type="text" class="form-control" id="title" value="{{post.title}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="content"> 상담내용 </label>
+                <textarea class="form-control" id="content" readonly>{{post.content}}</textarea>
+            </div>
+            <div>
+                <input type="button" id="list" value="상담 이미지 목록">
+                <script>
+                var img = '{{post.images}}';
+                //var str = JSON.stringify(img.split(','));
+                var str = img;
+                $('#list').on('click',function(){
+                    //window.location.href = '/view/images/last/'+str;
+                    window.open('/view/images/last/'+str,"new_window",'width=800, height=700, toolbar=no, menubar=no, scrollbars=no, resizable=yes')
+                })
+                </script>
+            </div>
+        </form>
+        <a href="/posts/index" role="button" class="btn btn-secondary">목록(돌아가기)</a>
+    </div>
+</div>
+
+{{>layout/footer}}
