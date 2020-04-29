@@ -1,13 +1,5 @@
 package springboot.web;
 
-        import ch.qos.logback.core.net.SyslogOutputStream;
-        import com.amazonaws.services.s3.AmazonS3;
-        import com.amazonaws.services.s3.model.GetObjectRequest;
-        import com.amazonaws.services.s3.model.S3Object;
-        import com.amazonaws.services.s3.model.S3ObjectInputStream;
-        import com.amazonaws.util.IOUtils;
-        import com.fasterxml.jackson.databind.util.JSONPObject;
-        //import com.sun.org.apache.xerces.internal.xs.StringList;
         import lombok.RequiredArgsConstructor;
         import org.json.simple.JSONObject;
         import org.json.simple.parser.JSONParser;
