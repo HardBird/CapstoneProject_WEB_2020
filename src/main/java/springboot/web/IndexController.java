@@ -22,7 +22,7 @@ package springboot.web;
         import springboot.web.dto.Gallery.GalleryDto;
         import springboot.web.dto.Posts.PostsResponseDto;
         import springboot.web.dto.client.ClientResponseDto;
-
+        import springboot.service.S3Service;
         import javax.servlet.http.HttpSession;
         import javax.xml.parsers.ParserConfigurationException;
         import java.io.*;
@@ -37,7 +37,6 @@ package springboot.web;
 public class IndexController {
 
     private final Service_Result service_result = new Service_Result();
-
     private final PostsService postsService;
     private final CounselorService counselorService;
     private final ClientService clientService;
