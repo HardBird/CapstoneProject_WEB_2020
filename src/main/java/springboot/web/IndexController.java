@@ -68,7 +68,9 @@ public class IndexController {
         return "posts-findByCounselor";
     }
     @GetMapping("/")
-    public String root(Model model) {
+    public String root(Model model)
+    {
+        count = galleryService.getList().size();
         return "main";
     }
 
@@ -114,7 +116,7 @@ public class IndexController {
         String path = "https://" + s3Service.S3_DOMAIN_NAME + "/image/"+"img"+count+".jpg";
         map.put("img", path);
         String t;
-        if(flag==1)
+            if(flag==1)
             t="true";
         else
             t="false";
