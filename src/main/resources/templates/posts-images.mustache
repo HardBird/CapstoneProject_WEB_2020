@@ -1,8 +1,20 @@
-{{>layout/header}}
-<h1>이미지 출력</h1>
+
+<script>
+                    var check =1;
+</script>
+
+
+<h1 >이미지 출력</h1>
 <div id="test">
     {{#images}}
-    <img id="img" src="https://capstone-naeronambul.s3.ap-northeast-2.amazonaws.com/image/{{.}}" />
+        <tr>
+            <td><script>
+                document.write((check++));
+            </script></td>
+            <td><img id="img" src="https://capstone-naeronambul.s3.ap-northeast-2.amazonaws.com/image/{{.}}" /></td>
+        </tr>
     {{/images}}
 </div>
-{{>layout/footer}}
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

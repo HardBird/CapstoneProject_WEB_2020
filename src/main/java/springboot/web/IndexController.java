@@ -107,6 +107,12 @@ public class IndexController {
         images.add(imgPath);
         return "result_img";
     }
+
+    @GetMapping("/main/ss1")
+    public String root2(Model model) {
+        return "main2";
+    }
+
     @ResponseBody
     @RequestMapping("/reload")
     public Map<String,String> reload(Model model) throws IOException {
