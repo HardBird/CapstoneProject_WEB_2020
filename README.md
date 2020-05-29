@@ -1,4 +1,11 @@
-# capstone_project(Incheon Nataional University)      Computer Science major 2019 ~ 2020 Capstone Project (WEB)
+# capstone_project(Incheon Nataional University) 2019 ~ 2020 (WEB)
+
+설명
+===
+<ol>1. 팀이름 : 내로남불</ol>
+<ol>2. 구성원 : 김정욱, 강병헌, 김민규, 유승한</ol>
+<ol>3. 작품명 : CNN을 활용한 심리예측 시스템</ol>
+<ol>4. 설명 : 실시간으로 예측되는 내담자의 비언어적 행동을 캡쳐해서 인공지능으로 세부분류한 뒤 해당되는 심리학적 의미를 실시간 상담에 제공하는 서비스</ol>
 
 전체 개요
 =======
