@@ -1,4 +1,4 @@
-# capstone_project(Incheon Nataional University) 2019 ~ 2020 (WEB)
+# capstone_project(Incheon Nataional University) 2019 ~ 2020
 
 설명
 ===
