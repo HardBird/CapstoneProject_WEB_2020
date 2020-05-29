@@ -1,6 +1,8 @@
-# capstone_project(Incheon Nataional University)Computer Science major 2019 ~ 2020 Capstone Project (WEB)
+# capstone_project(Incheon Nataional University)      Computer Science major 2019 ~ 2020 Capstone Project (WEB)
 
-# 전체 개요
+전체 개요
+=======
+![list](https://postfiles.pstatic.net/MjAyMDA1MjlfMjAw/MDAxNTkwNzMwNDk3MzM1.aQ7VqP3eObCgTLhjEwY72XE3YudAyWdV2njc5pe35Hwg.8v3HhUOqUW-J8huPeMYNlCaJJA6qXbQCuhbydn_mFm4g.JPEG.wjddnr972/list.jpeg?type=w773)
 
 Web
 ===
